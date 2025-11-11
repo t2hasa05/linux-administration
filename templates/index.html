@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Viikkotehtävä 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #56314f;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .container {
+            background: #ebeaff;
+            padding: 40px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello from MySQL!</h1>
+        <p>This is a minimal Python web application on a LEMP stack using Flask, Gunicorn, and Nginx as a reverse proxy.</p>
+        <p><b>🕑 Server time (from SQL):</b> <span id="sql-time">{{ current_time }}</span></p>
+    </div>
+    <script>
+    async function updateTime() {
+        const response = await fetch('/time');
+        const data = await response.json();
+        document.getElementById('sql-time').textContent = data.time;
+    }
+
+    // Päivitä heti kun sivu latautuu
+    updateTime();
+
+    // Päivitä 1 sekunnin välein
+    setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

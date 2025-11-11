@@ -1,0 +1,36 @@
+# Python-virtuaaliympäristö
+venv/
+__pycache__/
+*.pyc
+
+# IDE/editori -asetuksia
+.vscode/
+.idea/
+
+# Linux/macOS roskaa
+.DS_Store
+
+# Tietoturva: älä tallenna salasanoja
+.env
+*.env
+
+# Lokit
+*.log
+# Python-virtuaaliympäristö
+venv/
+__pycache__/
+*.pyc
+
+# IDE/editori -asetuksia
+.vscode/
+.idea/
+
+# Linux/macOS roskaa
+.DS_Store
+
+# Tietoturva: älä tallenna salasanoja
+.env
+*.env
+
+# Lokit
+*.log
